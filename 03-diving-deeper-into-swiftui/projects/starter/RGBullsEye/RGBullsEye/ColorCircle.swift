@@ -37,8 +37,14 @@ struct ColorCircle: View {
   let size: CGFloat
 
   var body: some View {
-    Circle()
-      .fill(Color(red: rgb.red, green: rgb.green, blue: rgb.blue))
+      ZStack {
+          Circle()
+              .fill(Color.element)
+              .northWestShadow()
+          Circle()
+              .fill(Color(red: rgb.red, green: rgb.green, blue: rgb.blue))
+              .padding(20)
+      }
       .frame(width: size, height: size)
   }
 }
