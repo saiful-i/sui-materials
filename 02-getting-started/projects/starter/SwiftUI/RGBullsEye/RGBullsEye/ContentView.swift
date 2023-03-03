@@ -33,10 +33,20 @@
 import SwiftUI
 
 struct ContentView: View {
-  var body: some View {
-    Text("Hello, world!")
-      .padding()
-  }
+    var body: some View {
+        VStack {
+            Color(red: 0.5, green: 0.5, blue: 0.5)
+            Text("R: ??? G: ??? B: ???")
+                .padding()
+            Color(red: 0.5, green: 0.5, blue: 0.5)
+            Text("R: 204 G: 76 B: 178")
+                .padding()
+            Slider(value: .constant(0.5))
+            Button(action: {}, label: {
+                Text("Hit Me")
+            })
+        }
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {
